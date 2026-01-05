@@ -29,5 +29,9 @@
 				"path": "./snippets/twig.json"
 			}
 		]
+	},
+	"devDependencies": {
+		"@vscode/test-cli": "^0.0.12",
+		"@vscode/test-electron": "^2.5.2"
 	}
 }
