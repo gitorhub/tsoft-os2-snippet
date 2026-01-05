@@ -25,8 +25,6 @@ Documentation:
 }
 ```
 
-![Settings](images/setting.png)
-
 ## Snippets Overview
 
 - `snippets/twig.json` → OS2 Twig snippets
