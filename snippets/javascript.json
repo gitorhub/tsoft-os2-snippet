@@ -1,0 +1,294 @@
+{
+	"os2 getLocale": {
+		"prefix": ["getLocale", "os2-getLocale"],
+		"body": ["const locale = getLocale();"]
+	},
+	"os2 request": {
+		"prefix": ["request", "os2-request", "http"],
+		"body": [
+			"const res = await request('${1:GET}', '${2:/api/endpoint}', ${3:null}${4:, '${5:application/json}'});",
+			"const data = await res.json();"
+		]
+	},
+	"os2 LocalApi.get": {
+		"prefix": ["LocalApi.get", "localget"],
+		"body": ["const ${1:value} = LocalApi.get('${2:key}', ${3:null});"]
+	},
+	"os2 LocalApi.set": {
+		"prefix": ["LocalApi.set", "localset"],
+		"body": ["LocalApi.set('${1:key}', ${2:value}${3:, ${4:3600}});"]
+	},
+	"os2 LocalApi.remove": {
+		"prefix": ["LocalApi.remove", "localremove"],
+		"body": ["LocalApi.remove('${1:key}');"]
+	},
+	"os2 scrollBehavior": {
+		"prefix": ["scrollBehavior", "os2-scroll"],
+		"body": ["scrollBehavior('${1:#target}', ${2:0}${3:, ${4:false}});"]
+	},
+	"os2 loader": {
+		"prefix": ["loader", "os2-loader"],
+		"body": ["loader(${1:true});"]
+	},
+	"os2 addClass": {
+		"prefix": ["addClass", "os2-addClass"],
+		"body": ["addClass(${1:element}, '${2:active}');"]
+	},
+	"os2 removeClass": {
+		"prefix": ["removeClass", "os2-removeClass"],
+		"body": ["removeClass(${1:element}, '${2:active}');"]
+	},
+	"os2 toggleClass": {
+		"prefix": ["toggleClass", "os2-toggleClass"],
+		"body": ["toggleClass(${1:element}, '${2:active}');"]
+	},
+	"os2 getUrlParam": {
+		"prefix": ["getUrlParam", "os2-getUrlParam"],
+		"body": ["const ${1:value} = getUrlParam('${2:key}'${3:, '${4:window.location.href}'});"]
+	},
+	"os2 setUrlParam": {
+		"prefix": ["setUrlParam", "os2-setUrlParam"],
+		"body": ["const url = setUrlParam('${1:key}', '${2:value}'${3:, '${4:window.location.href}'});"]
+	},
+	"os2 deleteUrlParam": {
+		"prefix": ["deleteUrlParam", "os2-deleteUrlParam"],
+		"body": ["const url = deleteUrlParam('${1:key}'${2:, '${3:window.location.href}'});"]
+	},
+	"os2 setCookie": {
+		"prefix": ["setCookie", "os2-setCookie"],
+		"body": ["setCookie('${1:cookieName}', '${2:cookieValue}', ${3:7});"]
+	},
+	"os2 getCookie": {
+		"prefix": ["getCookie", "os2-getCookie"],
+		"body": ["const ${1:value} = getCookie('${2:cookieName}');"]
+	},
+	"os2 browser": {
+		"prefix": ["browser", "os2-browser"],
+		"body": ["const info = browser();"]
+	},
+	"os2 isMobile": {
+		"prefix": ["isMobile", "os2-isMobile"],
+		"body": ["const mobile = isMobile(${1:''});"]
+	},
+	"os2 getLink": {
+		"prefix": ["getLink", "os2-getLink"],
+		"body": ["const link = getLink('${1:param}', '${2:value}'${3:, '${4:/collection}'});"]
+	},
+	"os2 evalScripts": {
+		"prefix": ["evalScripts", "os2-evalScripts"],
+		"body": ["evalScripts(${1:content});"]
+	},
+	"os2 evalScriptsAdd": {
+		"prefix": ["evalScriptsAdd", "os2-evalScriptsAdd"],
+		"body": ["evalScriptsAdd(${1:content}, '${2:script-id}');"]
+	},
+	"os2 scriptAdd": {
+		"prefix": ["scriptAdd", "os2-scriptAdd"],
+		"body": ["scriptAdd('${1:/assets/js/lib.js}'${2:, ${3:onload}}${4:, ${5:onerror}}${6:, '${7:sha256-...}'});"]
+	},
+	"os2 setLanguage": {
+		"prefix": ["setLanguage", "os2-setLanguage"],
+		"body": ["setLanguage('${1:tr}'${2:, ${3:() => {}}});"]
+	},
+	"os2 setCurrency": {
+		"prefix": ["setCurrency", "os2-setCurrency"],
+		"body": ["setCurrency('${1:TRY}'${2:, ${3:() => {}}});"]
+	},
+	"os2 copyText": {
+		"prefix": ["copyText", "os2-copyText"],
+		"body": ["await copyText('${1:text}'${2:, '${3:Copied!}'});"]
+	},
+	"os2 awaitTimeOut": {
+		"prefix": ["awaitTimeOut", "os2-awaitTimeOut", "sleep"],
+		"body": ["await awaitTimeOut(${1:300});"]
+	},
+	"os2 modalClose": {
+		"prefix": ["modalClose", "os2-modalClose"],
+		"body": ["modalClose(${1:modal}${2:, ${3:modalObj}});"]
+	},
+	"os2 modal": {
+		"prefix": ["modal", "os2-modal"],
+		"body": [
+			"modal({",
+			"\tid: '${1:new-modal}',",
+			"\tclass: '${2:classname}',",
+			"\twidth: '${3:640}',",
+			"\ttitle: '${4:Modal Title}',",
+			"\thtml: ${5:content},",
+			"\tclose: ${6:true}",
+			"});"
+		]
+ 	},
+	"os2 notify": {
+		"prefix": ["notify", "os2-notify"],
+		"body": [
+			"notify({",
+			"\ttext: '${1:message}',",
+			"\tclassName: '${2|success,danger,warning,info|}',",
+			"\tduration: ${3:3200}",
+			"});"
+		]
+	},
+	"os2 drawerClose": {
+		"prefix": ["drawerClose", "os2-drawerClose"],
+		"body": ["drawerClose();"]
+	},
+	"os2 mask": {
+		"prefix": ["mask", "os2-mask"],
+		"body": ["mask(${1:element}, '${2:99/99/9999}'${3:, ${4:/[0-9/]/}${5:, ${6:10}}});"]
+	},
+	"os2 format": {
+		"prefix": ["format", "os2-format"],
+		"body": ["const ${1:text} = format(${2:price}${3:, ${4:2}});"]
+	},
+	"os2 vat": {
+		"prefix": ["vat", "os2-vat"],
+		"body": ["const ${1:text} = vat(${2:price}, ${3:20});"]
+	},
+	"os2 priceToFloat": {
+		"prefix": ["priceToFloat", "os2-priceToFloat"],
+		"body": ["const ${1:val} = priceToFloat('${2:1.234,56}');"]
+	},
+	"os2 triggerEvent": {
+		"prefix": ["triggerEvent", "os2-triggerEvent"],
+		"body": ["triggerEvent(${1:element}, '${2:change}');"]
+	},
+	"os2 outsideClick": {
+		"prefix": ["outsideClick", "os2-outsideClick"],
+		"body": ["outsideClick(${1:eventElement}, ${2:element}, ${3:() => {}});"]
+	},
+	"os2 timeConverter": {
+		"prefix": ["timeConverter", "os2-timeConverter"],
+		"body": ["const ${1:text} = timeConverter(${2:Date.now()/1000}${3:, '${4:d.m.y h:i:s}'});"]
+	},
+	"os2 taxLoader": {
+		"prefix": ["taxLoader", "os2-taxLoader"],
+		"body": ["taxLoader(${1:{}});"]
+	},
+	"os2 stringToObject": {
+		"prefix": ["stringToObject", "os2-stringToObject"],
+		"body": ["const obj = stringToObject('${1:key1:value1;key2:value2}');"]
+	},
+	"os2 snippetUri": {
+		"prefix": ["snippetUri", "os2-snippetUri"],
+		"body": ["const url = snippetUri('${1:snippet-name}', ${2:{}});"]
+	},
+	"os2 loadSnippet": {
+		"prefix": ["loadSnippet", "os2-loadSnippet"],
+		"body": [
+			"loadSnippet({",
+			"\turl: snippetUri('${1:snippet-name}', ${2:{}}),",
+			"\ttarget: '${3:#target}',",
+			"\tcallback: ${4:(html) => {}}",
+			"});"
+		]
+	},
+	"os2 getOffsetTop": {
+		"prefix": ["getOffsetTop", "os2-getOffsetTop"],
+		"body": ["const top = getOffsetTop(${1:element});"]
+	},
+	"os2 checkValidity": {
+		"prefix": ["checkValidity", "os2-checkValidity"],
+		"body": ["if (!checkValidity(${1:form})) return;"]
+	},
+	"os2 popoverAlert": {
+		"prefix": ["popoverAlert", "os2-popoverAlert"],
+		"body": [
+			"popoverAlert({",
+			"\titem: ${1:element},",
+			"\tmessage: '${2:Message}',",
+			"\tduration: ${3:3000},",
+			"\tclasses: '${4:btn btn-danger}',",
+			"\tscrollable: ${5:true},",
+			"\ttype: '${6:inline}'",
+			"});"
+		]
+	},
+	"os2 popoverAlertHide": {
+		"prefix": ["popoverAlertHide", "os2-popoverAlertHide"],
+		"body": ["popoverAlertHide(${1:parent});"]
+	},
+	"os2 passwordToggle": {
+		"prefix": ["passwordToggle", "os2-passwordToggle"],
+		"body": ["passwordToggle(${1:event}, ${2:input});"]
+	},
+	"os2 captchaToggle": {
+		"prefix": ["captchaToggle", "os2-captchaToggle"],
+		"body": ["captchaToggle(${1:element});"]
+	},
+	"os2 messageCount": {
+		"prefix": ["messageCount", "os2-messageCount"],
+		"body": ["messageCount();"]
+	},
+	"os2 formLoader": {
+		"prefix": ["formLoader", "os2-formLoader"],
+		"body": ["formLoader(${1:{}});"]
+	},
+	"os2 tsRegion": {
+		"prefix": ["tsRegion", "os2-tsRegion"],
+		"body": ["tsRegion(${1:{}});"]
+	},
+	"os2 components.init": {
+		"prefix": ["components.init", "os2-components-init"],
+		"body": ["await components.init();"]
+	},
+	"os2 component init (named)": {
+		"prefix": ["component.init", "os2-component-init"],
+		"body": ["components.${1:name}.init();"]
+	},
+	"os2 component call": {
+		"prefix": ["component.call", "os2-component-call"],
+		"body": ["components.${1:name}(${2});"]
+	},
+	"os2 DOMContentLoaded bootstrap": {
+		"prefix": ["domready", "domcontentloaded", "os2-ready"],
+		"body": [
+			"document.addEventListener('DOMContentLoaded', async () => {",
+			"\tawait components.init();",
+			"});"
+		]
+	},
+	"os2 ON_PAGE_READY.push": {
+		"prefix": ["ON_PAGE_READY", "onpageready", "os2-onpageready"],
+		"body": [
+			"ON_PAGE_READY.push(function () {",
+			"\t${0}",
+			"});"
+		]
+	},
+	"os2 Twig var to JS (json_encode)": {
+		"prefix": ["twig-json", "json-encode", "os2-json"],
+		"body": ["const ${1:setting} = {{ ${2:SETTING}|json_encode|raw }};"]
+	},
+	"os2 callbacks.register": {
+		"prefix": ["callbacks.register", "callback-register"],
+		"body": ["callbacks.register('${1:event}', ${2:(data) => {}});"]
+	},
+	"os2 callbacks.remove": {
+		"prefix": ["callbacks.remove", "callback-remove"],
+		"body": ["callbacks.remove('${1:event}', ${2:handler});"]
+	},
+	"os2 callbacks.trigger": {
+		"prefix": ["callbacks.trigger", "callback-trigger", "emit"],
+		"body": ["callbacks.trigger('${1:event}', ${2:data});"]
+	},
+	"os2 data-callback attribute": {
+		"prefix": ["data-callback", "callback-attr"],
+		"body": ["data-callback=\"${1:event}:${2:handler}\""]
+	},
+	"os2 Theme.js bootstrap": {
+		"prefix": ["themejs", "os2-themejs"],
+		"body": [
+			"document.addEventListener('DOMContentLoaded', async () => {",
+			"\tawait components.init();",
+			"\tproductLoader();",
+			"\tmessageCount();",
+			"});"
+		]
+	},
+	"console.log": {
+		"prefix": ["cl", "console.log", "log"],
+		"body": ["console.log(${1});"]
+	}
+}
+

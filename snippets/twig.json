@@ -1,0 +1,322 @@
+{
+  "tsoft data-toggle": {
+    "prefix": ["data-toggle", "tdatatoggle", "datatoggle"],
+    "body": [
+      "data-toggle=\"${1|flag,form-submit,popup,country,city,town,district,state,accordion,product,show-in-stock,show-out-stock,tooltip,count-down,share,slider,drawer,qty,copy,tab,login,fast-register,password-toggle,social-login,logout,captcha-toggle,variant-one,variant-two,newsletter,dropdown,language,currency,sticky,live-search,favourite-count,member-name,message-count,cart-count,cart-price,menu,product-code,cart-preview,cart-drawer,variant-notify,variant-one-active,product-note-{{ P.ID }},product-subscribe-{{ P.ID }},collection,product-multiple,barcode,supplier-product-code,product-loader,product-showcase,showcase,light-gallery,zoom,product-card-catalog|}\""
+    ]
+  },
+  "twig for": {
+    "prefix": ["tfor", "twig-for", "for"],
+    "body": [
+      "{% for ${1:item} in ${2:items} %}",
+      "  ${0}",
+      "{% endfor %}"
+    ]
+  },
+  "twig if": {
+    "prefix": ["tif", "twig-if", "if"],
+    "body": [
+      "{% if ${1:condition} %}",
+      "  ${0}",
+      "{% endif %}"
+    ]
+  },
+  "twig if-else": {
+    "prefix": ["tifel", "twig-if-else", "ifelse"],
+    "body": [
+      "{% if ${1:condition} %}",
+      "  ${2}",
+      "{% else %}",
+      "  ${0}",
+      "{% endif %}"
+    ]
+  },
+  "twig include": {
+    "prefix": ["tinclude", "twig-include", "include"],
+    "body": ["{% include \"${1:snippet/path}\" %}"]
+  },
+  "twig extends": {
+    "prefix": ["textends", "twig-extends", "extends"],
+    "body": ["{% extends \"${1:layout/path}\" %}"]
+  },
+  "twig block": {
+    "prefix": ["tblock", "twig-block", "block"],
+    "body": [
+      "{% block ${1:name} %}",
+      "  ${0}",
+      "{% endblock %}"
+    ]
+  },
+  "twig set": {
+    "prefix": ["tset", "twig-set", "set"],
+    "body": ["{% set ${1:var} = ${0:value} %}"]
+  },
+  "twig filter": {
+    "prefix": ["tfilter", "twig-filter", "filter"],
+    "body": [
+      "{% filter ${1:upper|lower|escape|raw} %}",
+      "  ${0}",
+      "{% endfilter %}"
+    ]
+  },
+  "twig print": {
+    "prefix": ["tprint", "twig-print", "print"],
+    "body": ["{{ ${0:variable} }}"]
+  },
+  "twig translate (t.*)": {
+    "prefix": ["ttrans", "twig-trans", "trans"],
+    "body": ["{{ t.${1:key} }}"]
+  },
+  "section-slider (OS2)": {
+    "prefix": ["section-slider", "ts-section-slider"],
+    "body": [
+      "<div data-toggle=\"slider\"",
+      "     data-navigation=\"{{ SETTING.DISPLAY_NAVIGATION ? 1 : 0 }}\"",
+      "     data-thumbnail=\"{{ SETTING.DISPLAY_THUMBNAIL ? 1 : 0 }}\"",
+      "     {% if SETTING.PAGINATION_TYPE %}data-pagination-type=\"{{ SETTING.PAGINATION_TYPE }}\"{% endif %}",
+      "     data-loop=\"{{ SETTING.LOOP ? 1 : 0 }}\"",
+      "     data-autoplay=\"{{ SETTING.AUTOPLAY }}\"",
+      "     data-effect=\"{{ SETTING.EFFECT }}\">",
+      "  <div class=\"swiper\">",
+      "    <div class=\"swiper-wrapper\">",
+      "      {% for IMAGE in SETTING.IMAGES %}",
+      "        <a class=\"swiper-slide\" href=\"{{ IMAGE.URL.URL }}\"",
+      "           {% if IMAGE.URL.URL_TARGET %}target=\"{{ IMAGE.URL.URL_TARGET }}\"{% endif %}",
+      "           {% if IMAGE.URL.URL_REL %}rel=\"{{ IMAGE.URL.URL_REL }}\"{% endif %}>",
+      "          <picture>",
+      "            {% if IMAGE.IMG2.PATH %}",
+      "              <source media=\"(max-width: 768px)\" srcset=\"{{ IMAGE.IMG2.PATH }}\">",
+      "            {% endif %}",
+      "            <img src=\"{{ IMAGE.IMG1.PATH }}\" width=\"{{ IMAGE.IMG1.WIDTH }}\" height=\"{{ IMAGE.IMG1.HEIGHT }}\" alt=\"{{ IMAGE.TITLE }}\">",
+      "          </picture>",
+      "          {% if IMAGE.BTNTEXT %}<span>{{ IMAGE.BTNTEXT }}</span>{% endif %}",
+      "          {% if IMAGE.CONTENT %}<div>{{ IMAGE.CONTENT|raw }}</div>{% endif %}",
+      "        </a>",
+      "      {% endfor %}",
+      "    </div>",
+      "  </div>",
+      "</div>"
+    ]
+  },
+  "section-banner (OS2)": {
+    "prefix": ["section-banner", "ts-section-banner"],
+    "body": [
+      "<div class=\"section-banner\">",
+      "  {% if SETTING.TITLE %}<h2>{{ SETTING.TITLE }}</h2>{% endif %}",
+      "  {% if SETTING.SUBTITLE %}<p>{{ SETTING.SUBTITLE }}</p>{% endif %}",
+      "  <div class=\"banner-list\">",
+      "    {% for IMAGE in SETTING.IMAGES %}",
+      "      <a href=\"{{ IMAGE.URL.URL }}\"",
+      "         class=\"banner-item\"",
+      "         {% if IMAGE.URL.URL_TARGET %}target=\"{{ IMAGE.URL.URL_TARGET }}\"{% endif %}",
+      "         {% if IMAGE.URL.URL_REL %}rel=\"{{ IMAGE.URL.URL_REL }}\"{% endif %}>",
+      "        <picture>",
+      "          {% if IMAGE.IMG2.PATH %}",
+      "            <source media=\"(max-width: 768px)\" srcset=\"{{ IMAGE.IMG2.PATH }}\">",
+      "          {% endif %}",
+      "          <img src=\"{{ IMAGE.IMG1.PATH }}\" width=\"{{ IMAGE.IMG1.WIDTH }}\" height=\"{{ IMAGE.IMG1.HEIGHT }}\" alt=\"{{ IMAGE.TITLE }}\">",
+      "        </picture>",
+      "        <div class=\"banner-meta\">",
+      "          {% if IMAGE.TITLE %}<strong>{{ IMAGE.TITLE }}</strong>{% endif %}",
+      "          {% if IMAGE.SUBTITLE %}<span>{{ IMAGE.SUBTITLE }}</span>{% endif %}",
+      "          {% if IMAGE.BTNTEXT %}<em>{{ IMAGE.BTNTEXT }}</em>{% endif %}",
+      "        </div>",
+      "        {% if IMAGE.CONTENT %}<div class=\"banner-content\">{{ IMAGE.CONTENT|raw }}</div>{% endif %}",
+      "      </a>",
+      "    {% endfor %}",
+      "  </div>",
+      "</div>"
+    ]
+  },
+  "toggle: popup example": {
+    "prefix": ["toggle-popup", "data-popup"],
+    "body": [
+      "<span data-url=\"${1:/srv/service/content-v5/fixed-page-content/-5}\"",
+      "      data-width=\"${2:1000}\"",
+      "      data-property=\"${3:CONTENT}\"",
+      "      data-toggle=\"popup\">${0}</span>"
+    ]
+  },
+  "toggle: product-loader example": {
+    "prefix": ["toggle-product-loader", "data-product-loader"],
+    "body": [
+      "<div id=\"catalog-{{ BLOCK.ID }}\">",
+      "  <div data-toggle=\"product\"></div>",
+      "</div>",
+      "<input type=\"hidden\"",
+      "       data-id=\"{{ BLOCK.ID }}\"",
+      "       data-target=\"#catalog-{{ BLOCK.ID }}\"",
+      "       data-item=\"[data-toggle='product']\"",
+      "       data-toggle=\"product-loader\">"
+    ]
+  },
+  "toggle: showcase example": {
+    "prefix": ["toggle-showcase", "data-showcase"],
+    "body": [
+      "<div data-toggle=\"showcase\">",
+      "  {% for TAB in SETTING.TABS %}",
+      "  <button type=\"button\" class=\"{% if TAB.INDEX == FIRST_TAB.INDEX %}active{% endif %}\"",
+      "          {% if TAB.INDEX != FIRST_TAB.INDEX %} data-url=\"{{ TAB.SHOWCASE.API }}\" {% endif %}",
+      "          data-toggle=\"showcase-button\"",
+      "          data-showcase-tab=\"#showcase-{{ BLOCK.ID }}{{ TAB.INDEX }}\"",
+      "          {% if not TAB.TITLE %} aria-label=\"showcase-button\" {% endif %}>{{ TAB.TITLE }}</button>",
+      "  {% endfor %}",
+      "</div>",
+      "",
+      "{% for key, TAB in SETTING.TABS %}",
+      "  {% if TAB.INDEX != FIRST_TAB.INDEX %}",
+      "  <div id=\"showcase-{{ BLOCK.ID }}{{ TAB.INDEX }}\">",
+      "    <div>",
+      "      <template data-showcase-products></template>",
+      "    </div>",
+      "  </div>",
+      "  {% endif %}",
+      "{% endfor %}"
+    ]
+  },
+  "toggle: light-gallery example": {
+    "prefix": ["toggle-light-gallery", "data-light-gallery"],
+    "body": [
+      "<div data-toggle=\"light-gallery\">",
+      "  <a href=\"${1:{{ X.URL }}}\">",
+      "    <img src=\"${2:{{ X.PATH }}}\" width=\"${3:100}\" height=\"${4:100}\">",
+      "  </a>",
+      "</div>"
+    ]
+  },
+  "toggle: zoom example": {
+    "prefix": ["toggle-zoom", "data-zoom"],
+    "body": [
+      "<a class=\"aspect-product\" href=\"{{ IMAGE.BIG }}\" data-id=\"{{ IMAGE.VARIANT_TYPE_ID }}\" data-toggle=\"product-image\">",
+      "  <picture>",
+      "    <img data-toggle=\"zoom\" data-scroll=\"${1:1}\" data-image=\"${2:{{ IMAGE.BIG }}}\">",
+      "  </picture>",
+      "</a>"
+    ]
+  },
+  "twig format()": {
+    "prefix": ["tformat", "format"],
+    "body": ["{{ format(${1:value}) }}"]
+  },
+  "twig vat()": {
+    "prefix": ["tvat", "vat"],
+    "body": ["{{ vat(${1:value}, ${2:vat}) }}"]
+  },
+  "twig snippet()": {
+    "prefix": ["tsnippet", "snippet"],
+    "body": ["{{ snippet('${1:path}', ${2:{}}) }}"]
+  },
+  "twig dump()": {
+    "prefix": ["tdump", "dump"],
+    "body": ["{{ dump(${1:SETTING}) }}"]
+  },
+  "twig menu()": {
+    "prefix": ["tmenu", "menu"],
+    "body": [
+      "{% set ${1:MENU} = menu('${2:MENU_MAIN}') %}",
+      "{% if ${1:MENU} is not empty %}",
+      "  {% for M in ${1:MENU} %}",
+      "    {{ ${3:M.NAME} }}",
+      "  {% endfor %}",
+      "{% endif %}"
+    ]
+  },
+  "twig url()": {
+    "prefix": ["turl", "url"],
+    "body": ["{{ url(${1:77}, '${2:page}') }}"]
+  },
+  "twig form()": {
+    "prefix": ["tform", "form"],
+    "body": ["{{ form('${1:form_1}') }}"]
+  },
+  "twig form() as data": {
+    "prefix": ["tformdata", "formdata"],
+    "body": [
+      "{% set ${1:formData} = form('${2:form_1}', true) %}",
+      "{{ ${1:formData} }}"
+    ]
+  },
+  "twig request_path": {
+    "prefix": ["trequestpath", "request_path"],
+    "body": ["{{ request_path.base }}/{{ request_path.path }}"]
+  },
+  "twig exchange()": {
+    "prefix": ["texchange", "exchange"],
+    "body": ["{{ exchange(${1:price}, '${2:from}', '${3:to}'${4:, ${5:vat}}) }}"]
+  },
+  "twig category()": {
+    "prefix": ["tcategory", "category"],
+    "body": [
+      "{% set CATEGORY = category(${1:335}) %}",
+      "{{ CATEGORY.NAME }}"
+    ]
+  },
+  "twig brand()": {
+    "prefix": ["tbrand", "brand"],
+    "body": [
+      "{% set BRND = brand(${1:82}) %}",
+      "{{ BRND.NAME }}"
+    ]
+  },
+  "twig model()": {
+    "prefix": ["tmodel", "model"],
+    "body": [
+      "{% set MDL = model(${1:3}) %}",
+      "{{ MDL.NAME }}"
+    ]
+  },
+  "twig product()": {
+    "prefix": ["tproduct", "product"],
+    "body": [
+      "{% set P = product(${1:3}) %}",
+      "{{ P.TITLE }}"
+    ]
+  },
+  "twig query()": {
+    "prefix": ["tquery", "query"],
+    "body": ["{{ query('${1:param}') }}"]
+  },
+  "twig asset()": {
+    "prefix": ["tasset", "asset"],
+    "body": ["{{ asset('${1:resources/assets/js/endpoint.js}') }}"]
+  },
+  "twig theme()": {
+    "prefix": ["ttheme", "theme"],
+    "body": ["{{ theme('current').${1:name} }}"]
+  },
+  "twig theme_asset()": {
+    "prefix": ["tthemeasset", "theme_asset"],
+    "body": ["{{ theme_asset('${1:img/logo.svg}') }}"]
+  },
+  "twig csrf_token()": {
+    "prefix": ["tcsrftoken", "csrf_token"],
+    "body": ["<input name=\"_token\" type=\"hidden\" value=\"{{ csrf_token() }}\">"]
+  },
+  "twig snippetUri()": {
+    "prefix": ["tsnippeturi", "snippetUri"],
+    "body": [
+      "<button :data-url=\"snippetUri('${1:product-comment-form}', ${2:{}})\" data-toggle=\"popup\">",
+      "  ${0:{{ t.make_comment }}}",
+      "</button>"
+    ]
+  },
+  "Context debug": {
+    "prefix": ["debug", "context", "_context", "dump"],
+    "body": [
+      "<script>",
+      "\tconsole.log({{_context|json_encode|raw}})",
+      "</script>"
+    ],
+    "description": "dump debug context"
+  },
+  "ON_PAGE_READY": {
+    "prefix": ["onpageready", "ON_PAGE_READY", "on page ready"],
+    "body": [
+      "ON_PAGE_READY.push(function () {",
+      "\tconsole.log('General Js Yüklemesi tamamlandı')",
+      "})"
+    ],
+    "description": "ON_PAGE_READY helper"
+  }
+}
+

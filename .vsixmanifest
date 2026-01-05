@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Language="en-US" Id="tsoft-os2-snippet" Version="0.1.0" Publisher="tsoft-os2-snippet"/>
+    <DisplayName>T-Soft OS2 Snippets</DisplayName>
+    <Description xml:space="preserve">OS2 snippets for Twig and JavaScript</Description>
+    <Tags>vscode</Tags>
+    <Categories>Snippets</Categories>
+    <GalleryFlags>Public</GalleryFlags>
+    <Properties>
+      
+      
+      <Property Id="Microsoft.VisualStudio.Services.Links.Learn" Value="https://github.com/gitorhub/tsoft-os2-snippet/blob/main/README.md" />
+      <Property Id="Microsoft.VisualStudio.Services.Branding.Color" Value="#ffffff" />
+      <Property Id="Microsoft.VisualStudio.Services.Branding.Theme" Value="light" />
+    </Properties>
+    
+    <Icon>images/icon.png</Icon>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Code"/>
+  </Installation>
+  <Dependencies/>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="package.json" Addressable="true" />
+    <Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="README.md" Addressable="true" /><Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="images/icon.png" Addressable="true" />
+  </Assets>
+</PackageManifest>
