@@ -3,14 +3,11 @@
 VSCode snippets for T-Soft OS2 theme development (Twig + JavaScript).
 
 Documentation:
-- Twig data-toggle: `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/twig-usage/data-toggle/`
-- Twig helper functions: `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/twig-usage/function/`
-- JavaScript usage: `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/js-usage/`
-- JS helper functions: `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/js-usage/function/`
+- Twig data-toggle: 
+- Twig helper functions:
+- JavaScript usage: 
+- JS helper functions: 
 - JS in Twig, callbacks, theme.js:
-  - `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/js-usage/#twig-i%CC%87%C3%A7erisinde-javascript-i%CC%87%C5%9Flemleri`
-  - `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/js-usage/callback/`
-  - `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/js-usage/themejs/`
 
 ## Setup
 
@@ -25,11 +22,6 @@ Documentation:
 }
 ```
 
-## Snippets Overview
-
-- `snippets/twig.json` → OS2 Twig snippets
-- `snippets/javascript.json` → OS2 JavaScript snippets
-- `snippets/smarty-v5.json` and `snippets/javascript-v5.json` → Legacy (v5) examples
 
 ---
 
@@ -68,9 +60,6 @@ Examples:
 <div data-toggle="showcase"></div>
 ```
 
-References:
-- Data toggle: `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/twig-usage/data-toggle/`
-- Helpers: `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/twig-usage/function/`
 
 ---
 
@@ -119,12 +108,6 @@ modal({ id: 'm1', title: 'Title', html: '...' });
 const url = snippetUri('product-comment-form', { include: 'product-detail', product_id: 1 });
 loadSnippet({ url, target: '#target', callback: (html) => {} });
 ```
-
-References:
-- JS helpers: `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/js-usage/function/`
-- JS in Twig: `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/js-usage/#twig-i%CC%87%C3%A7erisinde-javascript-i%CC%87%C5%9Flemleri`
-- Callbacks: `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/js-usage/callback/`
-- Theme.js: `https://os2-doc.tsoftthemes.com/docs/theme-development/tr/js-usage/themejs/`
 
 ---
 
