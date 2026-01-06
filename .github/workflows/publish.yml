@@ -21,14 +21,16 @@ jobs:
       - name: Install publishing tools
         run: npm install -g vsce ovsx
 
-      - name: Package VSIX
-        run: vsce package
+      - name: Package VSIX as latest
+        run: |
+          echo "Packaging latest VSIX"
+          vsce package --out "tsoft-snippets-latest.vsix"
 
       - name: Upload VSIX Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: extension-vsix
-          path: '*.vsix'
+          path: 'tsoft-snippets-latest.vsix'
 
       - name: Publish to VS Code Marketplace
         run: vsce publish --pat ${{ secrets.VSCE_TOKEN }}
