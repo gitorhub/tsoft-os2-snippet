@@ -1,7 +1,7 @@
 {
   "name": "tsoft-os2-snippet",
   "publisher": "tsoft-v5-snippet",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "displayName": "T-Soft OS2 Snippets",
   "description": "tsoft os2 snippets for twig and javascript",
   "license": "SEE LICENSE IN LICENSE or README.MD",
