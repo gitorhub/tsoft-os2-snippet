@@ -1,37 +1,37 @@
 {
-	"name": "tsoftos2snippets",
-	"displayName": "T-Soft OS2 Snippets",
-	"description": "tsoft os2 snippets for twig and javascript",
-	"version": "0.1.4",
-	"publisher": "tsoft-v5-snippet",
-	"license": "SEE LICENSE IN LICENSE or README.MD",
-	"homepage": "https://github.com/gitorhub/tsoft-os2-snippet/blob/main/README.md",
-	"repository": "https://github.com/gitorhub/tsoft-os2-snippet/blob/main/README.md",
-	"icon": "images/icon.png",
-	"engines": {
-		"vscode": "^0.10.1"
-	},
-	"galleryBanner": {
-		"color": "#ffffff",
-		"theme": "light"
-	},
-	"categories": [
-		"Snippets"
-	],
-	"contributes": {
-		"snippets": [
-			{
-				"language": "javascript",
-				"path": "./snippets/javascript.json"
-			},
-			{
-				"language": "twig",
-				"path": "./snippets/twig.json"
-			}
-		]
-	},
-	"devDependencies": {
-		"@vscode/test-cli": "^0.0.12",
-		"@vscode/test-electron": "^2.5.2"
-	}
+  "name": "tsoft-os2-snippet",
+  "publisher": "tsoft-v5-snippet",
+  "version": "0.1.4",
+  "displayName": "T-Soft OS2 Snippets",
+  "description": "tsoft os2 snippets for twig and javascript",
+  "license": "SEE LICENSE IN LICENSE or README.MD",
+  "homepage": "https://github.com/gitorhub/tsoft-os2-snippet/blob/main/README.md",
+  "repository": "https://github.com/gitorhub/tsoft-os2-snippet/blob/main/README.md",
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "galleryBanner": {
+    "color": "#ffffff",
+    "theme": "light"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/javascript.json"
+      },
+      {
+        "language": "twig",
+        "path": "./snippets/twig.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
 }
