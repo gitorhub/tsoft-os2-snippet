@@ -21,6 +21,15 @@ jobs:
       - name: Install publishing tools
         run: npm install -g vsce ovsx
 
+      - name: Package VSIX
+        run: vsce package
+
+      - name: Upload VSIX Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: extension-vsix
+          path: '*.vsix'
+
       - name: Publish to VS Code Marketplace
         run: vsce publish --pat ${{ secrets.VSCE_TOKEN }}
 
