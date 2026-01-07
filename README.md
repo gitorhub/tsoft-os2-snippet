@@ -111,14 +111,6 @@ loadSnippet({ url, target: '#target', callback: (html) => {} });
 
 ---
 
-## Legacy (v5)
-
-Legacy snippet sets are preserved:
-- `snippets/smarty-v5.json`
-- `snippets/javascript-v5.json`
-
----
-
 ## What it looks like
 
 ![JS Snippets](images/js.gif)
