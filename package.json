@@ -1,15 +1,18 @@
 {
   "name": "tsoft-os2-snippet",
   "publisher": "tsoft-v5-snippet",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "displayName": "T-SOFT SNIPPETS",
-  "description": "tsoft os2 snippets for twig and javascript",
-  "license": "SEE LICENSE IN LICENSE or README.MD",
-  "homepage": "https://github.com/gitorhub/tsoft-os2-snippet/blob/main/README.md",
-  "repository": "https://github.com/gitorhub/tsoft-os2-snippet/blob/main/README.md",
+  "description": "T-SOFT OS2 snippets for Twig and JavaScript",
+  "license": "MIT",
+  "homepage": "https://github.com/gitorhub/tsoft-os2-snippet",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitorhub/tsoft-os2-snippet.git"
+  },
   "icon": "images/icon.png",
   "engines": {
-    "vscode": "^0.10.1"
+    "vscode": "^1.80.0"
   },
   "galleryBanner": {
     "color": "#ffffff",
